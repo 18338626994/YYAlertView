@@ -80,6 +80,7 @@ static UIWindow *window = nil;
         window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         window.windowLevel = UIWindowLevelAlert;
         window.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.4];
+        
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignResponder)];
         [window addGestureRecognizer:tap];
     }
