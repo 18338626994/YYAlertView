@@ -48,6 +48,26 @@
                ReferencedContainer = "container:YYAlertView.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6B8DE8CA1E95E971006E6024"
+               BuildableName = "MYAlertViewTests.xctest"
+               BlueprintName = "MYAlertViewTests"
+               ReferencedContainer = "container:YYAlertView.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6B8DE8F01E95EA62006E6024"
+               BuildableName = "YYAlertFrameworkTests.xctest"
+               BlueprintName = "YYAlertFrameworkTests"
+               ReferencedContainer = "container:YYAlertView.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

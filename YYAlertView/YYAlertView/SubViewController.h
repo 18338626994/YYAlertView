@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SubViewController.h
 //  YYAlertView
 //
 //  Created by 于云飞 on 17/4/5.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-- (IBAction)push:(UIButton *)sender;
+@interface SubViewController : UIViewController
 
 @end
-

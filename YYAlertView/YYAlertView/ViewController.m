@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "YYAlertView.h"
+#import "SubViewController.h"
 
 @interface ViewController ()
 
@@ -27,7 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor yellowColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:246/255.0 green:171/255.0 blue:194/255.0 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 - (void)showAlert {
     YYAlertView *alertView = [YYAlertView alertTitle:@"商户中心" message:@"请输入请求host与描述des"];
@@ -48,10 +51,7 @@
     }];
     [alertView show];
 }
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self showAlert];
-}
+#pragma mark - getter
 - (UIButton *)cancel {
     if (_cancel == nil) {
         UIButton *button = [self customButton];
@@ -92,6 +92,9 @@
     }
     return _tf3;
 }
+
+#pragma mark - shortcut init
+
 - (UITextField *)customTf {
     UITextField *textTf = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 40, 30)];
     textTf.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
@@ -108,10 +111,23 @@
     [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     return button;
 }
+
+#pragma mark - actions
+- (IBAction)push:(UIButton *)sender {
+    SubViewController *sub = [[SubViewController alloc] init];
+    [self.navigationController pushViewController:sub animated:YES];
+}
+
+#pragma mark - touch actions
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self showAlert];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 @end
